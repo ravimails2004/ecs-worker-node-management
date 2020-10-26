@@ -9,7 +9,7 @@ pipeline {
 
             post {
                 success {
-                    sh "echo  source code checkout successfull"
+                    sh "echo  source code checkout successfully completed"
                 }
             }
         }
