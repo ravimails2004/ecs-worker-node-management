@@ -38,9 +38,9 @@ class EcsUtil():
         return self.client.update_container_instances_state(cluster=cluster, containerInstances=containerInstances, status=status)
     
     def deregister_container_instance(self, cluster, containerInstance, force=True):
-        print("====deregister_container_instance====")
-        print(cluster, containerInstance)
-        print("=================")
+        logger.info("====deregister_container_instance====")
+        logger.info(cluster, containerInstance)
+        logger.info("=================")
         return self.client.deregister_container_instance(cluster=cluster, containerInstance=containerInstance, force=force)
         
     def terminate_instances(self, InstanceIds, DryRun=False):
